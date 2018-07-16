@@ -7,6 +7,7 @@ defmodule Scriptex.MixProject do
       version: "0.1.0",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
+      escript: escript(),
       deps: deps()
     ]
   end
@@ -24,5 +25,9 @@ defmodule Scriptex.MixProject do
      {:poison, ">= 3.1.0"},
      {:jason, "~> 1.1"}
     ]
+  end
+
+  defp escript do
+    [main_module: Scriptex]
   end
 end
